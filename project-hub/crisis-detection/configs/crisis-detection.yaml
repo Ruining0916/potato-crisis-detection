@@ -23,7 +23,7 @@
     "annotation_codebook_url": "",
 
     "data_files": [
-       "/local/ruining09/crisis-detection/data/prepared_flattened/anxiety_flattened.jsonl"
+       "/local/ruining09/potato/data/anxiety_flattened.jsonl"
     ],
 
     "item_properties": {
