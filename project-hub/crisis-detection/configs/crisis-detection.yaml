@@ -16,14 +16,14 @@
     # * csv
     # * tsv
     #
-    "output_annotation_format": "tsv",
+    "output_annotation_format": "jsonl",
 
     # If annotators are using a codebook, this will be linked at the top to the
     # instance for easy access
     "annotation_codebook_url": "",
 
     "data_files": [
-       "/local/ruining09/potato/data/anxiety_flattened.jsonl"
+       "/home/ruining9/potato-crisis-detection/data/anxiety_flattened_sample_100.jsonl"
     ],
 
     "item_properties": {
@@ -32,6 +32,17 @@
         "context_key": "context"
     },
 
+    "automatic_assignment": {
+      #whether do automatic task assignment for annotators, default False.
+      "on": True,
+      "output_filename": 'task_assignment.json',
+      "sampling_strategy": 'random',
+      "labels_per_instance": 3,
+      "instance_per_annotator": 10,
+      "test_question_per_annotator": 0, # you must set up the test question in surveyflow to use this function
+
+      "users": [  ],
+    },
 
     "user_config": {
 
@@ -94,7 +105,8 @@
                     "Occupational / Functional Success",
                     "Ruminative Thought",
                     "Tobacco Use / Smoking Cessation",
-                    "Social Connectedness"
+                    "Social Connectedness",
+                    "None of above"
                 ],
                 "sequential_key_binding": true
             }
